@@ -1,0 +1,7 @@
+<h1>Our Courses</h1>
+<%# ビュー内でコースの配列をループする　%>
+<% offeredCourses.forEach(course => 
+{ %>
+<h5><%= course.title %></h5>
+<span>$ <%=course.cost %></span>
+<%}); %>
