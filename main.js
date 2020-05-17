@@ -51,6 +51,11 @@ var myQuery =Subscriber.findOne({
 myQuery.exec((error,data) => {
     if(data) console.log(data.name);
 });
+app.get("/subscribers",subscribersController.getAllSubscribers, 
+(req,res,next) => {
+    //requestオブジェクトからのデータをログに出す
+    console.log(req.data);
+});
 //本文の解析でURLエンコーディングとJSONパラメータの処理を行う
 app.use(
     express.urlencoded({
