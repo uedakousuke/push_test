@@ -4,6 +4,7 @@ const app = express();
 const homeController = require("./controllers/homeController");
 const errorController = require("./controllers/errorController");
 const Subscriber = require("./models/subscriber");
+const subscribersController = require("./controllers/subscribersController");
 //express-ejs-layoutsモジュールをロード
 const layouts =require("express-ejs-layouts");
 //mongooseをロード
