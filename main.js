@@ -18,9 +18,9 @@ mongoose.connect(
 );
 //データベースをdb変数に代入
 const db =mongoose.connection;
-db.once("open",() => {
+ db.once("open",() => {
     //「Mongooseを使ってMongoDBに接続できました！」
-    console.log("Successfully connected to MongoDB using Mongoose!")
+  console.log("Successfully connected to MongoDB using Mongoose!")
 });
 //mongoose.Schemaで新しいスキーマを作る
 const subscriberSchema =
@@ -63,7 +63,7 @@ app.use(
          extended:false
     }) 
      ); 
-     app.use(express.json());
+app.use(express.json());
 //expressアプリケーションを実体化する
 
 app.set("port",process.env.PORT || 3000);
