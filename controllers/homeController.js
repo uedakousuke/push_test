@@ -2,14 +2,14 @@
 exports.showCourses= (req,res) => {
     res.render("courses");
 }; 
-exports.showSignUp = (req,res) => {
+exports.showSignUP = (req,res) => {
     res.render("contact");
 };
 exports.postedSignUpForm = (req,res) => {
     res.render("thanks");
 };
 //コースの配列を定義
-var courses = [
+const courses = [
     {
         title:"Event Driven Cakes",
         cost:50
