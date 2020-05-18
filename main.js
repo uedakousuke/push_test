@@ -43,7 +43,7 @@ subscriber1.save((error,savedDocument) => {
     console.log(savedDocument);
 });
 
-var myQuery =Subscriber.findOne({
+const myQuery =Subscriber.findOne({
     name:"Jon Wexler"
 })
 .where("email",/wexler/);
