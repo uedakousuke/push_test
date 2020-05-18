@@ -31,7 +31,7 @@ mongoose.Schema({
 });
 
 //新しいSubscriberを実体化する
-var subscriber1 = new Subscriber({
+const subscriber1 = new Subscriber({
     name:"Jon Wexler",
     email:"jon@jonwexler.com"
 });
@@ -82,7 +82,7 @@ app.get("/courses",homeController.showCourses);
 app.get("/contact",homeController.showSignUP);
 app.post("/contact",homeController.postedSignUpForm);
 //エラー処理用にミドルウェア関数を追加
-app.use(errorController.pageNotFoundError);
+app.use(errorController.pageNotFOUNDError);
 app.use(errorController.internalServerError);
 //アプリケーションがポート3000を監視するように設定
 app.listen(app.get("port"),()=> {
